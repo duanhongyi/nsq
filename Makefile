@@ -8,7 +8,7 @@ DEPLOYMENT_NAME ?= nsqd
 DEIS_REGISTRY ?= ${DEV_REGISTRY}
 IMAGE_PREFIX ?= deis
 
-TEST_ENV_PREFIX := docker run --rm -v ${CURDIR}:/bash -w /bash quay.io/deis/shell-dev
+TEST_ENV_PREFIX := docker run --rm -v ${CURDIR}:/bash -w /bash deis/shell-dev
 SHELL_SCRIPTS = $(wildcard rootfs/opt/nsq/bin/*)
 
 include versioning.mk
